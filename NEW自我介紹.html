@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >自我介紹</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 80px;
+            font-weight: 50px;
+            letter-spacing: 20px;
+            color: #333;
+
+            border-bottom: 5px;
+
+            background-color: #5DE2E7;
+            width: 400PX;
+            height: 100px;
+
+
+        }
+        p {
+            color: #666;
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            width: 500px;
+            border-bottom: 5px solid #000000;
+            border-top: 5px solid #000000;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #CECECE;
+        }
+        section {
+            background-color: #D7CDA1;
+            display: none; /* 隱藏所有 section 內容 */
+        }
+        section.active {
+            display: block; /* 顯示選中的 section 內容 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>自我介紹</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me" onclick="showSection('Home-Page')">首頁</a></li>
+                <li><a href="#about-me" onclick="showSection('about-me')">關於我</a></li>
+                <li><a href="#my-interests" onclick="showSection('my-interests')">我的興趣</a></li>
+                <li><a href="#my-features" onclick="showSection('my-features')">我的特點</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home-Page" class="active" style="background-color: #FFFFFF">
+        <div class="image-container">
+            <img src="圖/證件照01.jpg" alt="我的照片" width="300" height="400">
+        </div>
+    </section>
+    <section id="about-me">
+        <h2>關於我</h2>
+        <p>大家好，我是洪呈翰！</p>
+        <P>畢業於中國文化大學 資訊工程學系。</p>
+        <p>我對於自己的程式語言能力充滿信心，不管是PYTHON 還是JAVA，我都有能力做出程式來。</p>
+        <a href="https://github.com/cyrovine?tab=overview&from=2024-04-01&to=2024-04-25"><img src="圖/GITHUB.PNG" style="display:block; margin:auto;" alt="GITHUB" width="400" height="250"></a>
+        <a href="https://www.pccu.edu.tw/"><img src="圖/學校.PNG" style="margin:auto;"></a>
+        <a href="https://iecs.pccu.edu.tw/"><img src="圖/資工.PNG" style="display:inline-block; margin:auto"; width="500"  height="100"></a>
+
+    </section>
+    <section id="my-interests">
+        <h2>我的興趣</h2>
+        <ul>
+            <li>聽音樂</li>
+            <P>像是imagine dragons、911這種快節奏的類型</P>
+            <a><img src="圖/imagine dragons.JPG" alt="imagine dragons" width="400" height="250"></a>
+            <a><img src="圖/玖壹壹.JPG" alt="玖壹壹" width="400"  height="250"></a>
+            <li>騎車兜風</li>
+            <P>有時假日會和朋友們騎車四處閒晃</P>
+            <img src="圖/水尾漁港日出.JPG" alt="水尾漁港日出" width="400" height="250">
+            <img src="圖/花蓮鐵道行.JPG" alt="花蓮鐵道行" width="300" height="400">
+            <li>測驗程式</li>
+            <P>和朋友一同測驗網上的程式，若有問題，到官方寫下遇到的問題</P>
+            <li>品嘗美食</li>
+            <P>為了吃到從網上見到的那口美味，我會直衝到當地品嘗</P>
+        </ul>
+    </section>
+    <section id="my-features">
+        <h2>我的特點</h2>
+        <ul>
+            <li>堅韌不拔的心</li>
+            <P>面對批評或指教，可以虛心接受並從中吸取教訓。</P>
+            <li>認真負責的態度</li>
+            <P>對於任何工作，我會全力以赴去完成</P>
+            <li>小有所成的程式語言</li>
+            <P>在校札實的學習，對於鑽寫程式有信心</P>
+            <li>樂觀愉快的過每一天</li>
+            <P>與其悲觀過活，不積極樂觀過生活</P>
+        </ul>
+    </section>
+    
+    <script>
+        function showSection(sectionId) {
+            // 隱藏所有 section
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // 顯示選中的 section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
